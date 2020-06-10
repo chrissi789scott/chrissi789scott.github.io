@@ -1,1 +1,104 @@
-First Website!
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <title>Chrissi's Website</title>
+    </head>
+        <style>
+    body {
+        background: rgb(109, 121, 171);
+        color: rgb(109, 121, 171);
+        padding: 7.5px;
+        font-family: serif;
+    }
+    header {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    #all-contents {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    /* navigation menu */
+    nav {
+        background: rgb(88, 98, 141);
+        margin-bottom: 20px;
+        display: flex;
+        padding: 7.5px;
+    }
+    nav header {
+        display: flex;
+        align-items: center;
+        color: rgb(226, 192, 80);
+        flex: 1;
+    }
+    nav ul {
+        list-style-image: none;
+    }
+    nav li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+    nav a {
+        text-decoration: serif;
+        color: #E2C050;
+    }
+
+    /* main container area beneath menu */
+    main {
+        background: rgb(226, 192, 80);
+        display: flex;
+        opacity:0.75;
+    }
+    .sidebar {
+        margin-right: 25px;
+        padding: 15px;
+    }
+    .sidebar img {
+        width: 200px;
+    }
+    .content {
+        flex: 1;
+        padding: 25px;
+        
+    }
+    .interests header {
+        font-size: 2em;
+    }
+</style>
+        
+    <body>
+      <div id="all-contents">
+          
+              <nav>
+                  
+                  <header>Chrissi's Website</header>
+                  <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="portfolio.html">Portfolio</a></li>
+                  </ul>
+              </nav>
+                  
+              
+              <main>
+                    <div class="sidebar">
+                        <img src="https://i.pinimg.com/564x/d1/34/3d/d1343da99b85e0e7d0ffcc84b92e06df.jpg">
+                    </div>
+                  
+                    <div class="content>">
+                        <header>Chrissi Scott</header>
+                        <p>Student at David Thibodaux STEM Magnet Academy</p>
+                        
+                        <section class="interests">
+                            <header>Interests</header>
+                            <ul>
+                                <li>Creative writing</li>
+                                <li>Making graphic edits</li>
+                                <li>Discovering new music</li>
+                            </ul>
+                        </section>
+                    </div>
+              </main>
+      </div>
+    </body>
+</html>
