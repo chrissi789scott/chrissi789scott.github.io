@@ -8,13 +8,19 @@
 		.box {
 			width: 75px;
 			height: 70px;
-			background-color: teal;
+			background-color: #B26AD1;
 			font-size: 400%;
+			text-decoration:serif;
 			text-align: center;
 			display: block;
 			position: absolute;
-			top: 100px;
+			top: 300px;
 			left: 50px;  /* <--- Change me! */
+		}
+		
+		body {
+			background-image: url(https://i.pinimg.com/564x/7f/84/c8/7f84c887b8cbcc54ca194cfbceb5f327.jpg);
+			background-size: 450px 410px;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -26,7 +32,7 @@
 
 	<script>
 		(function(){
-			'use strict'
+			'use strict';
 			/* global jQuery */
 
 			//////////////////////////////////////////////////////////////////
@@ -58,8 +64,6 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			var positionX = 0
-			
 			var positionX = 0 + 10;
 			
 			var points = 0;
@@ -74,14 +78,19 @@
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
-			function update() {
-				positionX = positionX + 10;
-				
-				moveBoxTo(positionX)
-			};
-			
-			
+		function update() {
+              moveBoxTo(positionX += speed);
+                box.css("left", positionX);
+               
+                if (positionX > boardWidth) {
+                    speed = -speed;
+                }
+                if (positionX < 0) {
+                    speed = -speed;
+                }
+            }
 
+			
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to
@@ -90,12 +99,14 @@
 			function handleBoxClick() {
 				positionX = 0;
 				
-				points = points + 1
+				points = points + 1;
 				
 				changeBoxText(points);
+				
+				speed = speed + 3;
 
 
-			};
+			}
 		})();
 	</script>
 </body>
